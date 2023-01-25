@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const blogRouter = require('./routers/blogRoutes')
 const userRouter = require('./routers/userRoutes')
 const authRouter = require('./routers/authRoutes')
+const productRouter = require('./routers/productRouter')
 const passport = require('passport')
 const config = require('./config.json')
 const app = express()
@@ -59,9 +60,10 @@ app.get('/api/test/auth', passport.authenticate('oauth-bearer', {session: false}
 console.log(req, res, '+++++')
 })
 
+app.use('/', authRouter)
 app.use('/blog', blogRouter)
 app.use('/user', userRouter)
-app.use('/', authRouter)
+app.use('/product', productRouter)
 
 app.use((req, res) => {
     res.sendFile('./views/error.html', { root: __dirname })
