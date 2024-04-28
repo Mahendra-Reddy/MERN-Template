@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 
 const dbURI = 'mongodb://127.0.0.1/micro-services';
 
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }).then(res => {
+mongoose.connect(dbURI).then(res => {
     app.listen(3334, () => {
         console.log('blogs server is running in port 3334')
     })

@@ -23,7 +23,7 @@ const options = {
     scope: EXPOSED_SCOPES
 }
 
-const dbURI = 'mongodb://127.0.0.1/Mahendra';
+const dbURI = 'mongodb+srv://manireddy557:ycsg6zw9A2ycmaHD@cluster0.9vu7jlz.mongodb.net/testDB';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }).then(result => {
     app.listen(7777, () => {

@@ -12,7 +12,7 @@ const auth = (req, res, next) => {
 if(req.headers.token === 'true'){
     next()
 }
-res.send('your auth got failed')
+// res.send('your auth got failed')
 }
 
 app.use('/api/v1.0.0/users', auth, proxy('http://localhost:3335'))
