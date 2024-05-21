@@ -1,10 +1,10 @@
 const Signup = () => (
     <div>
-        <p>Name :</p>
+        <p className="style">Name :</p>
         <input type="text" />
-        <p>Email :</p>
+        <p className="style">Email :</p>
         <input type="email" />
-        <p>Password: </p>
+        <p className="style">Password: </p>
         <input type="password" />
     </div>
 )
